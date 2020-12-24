@@ -16,7 +16,7 @@ public class Demo03Sort {
         list01.add(4);
         list01.add(3);
         list01.add(2);
-//        System.out.println(list01);
+        System.out.println(list01);
 
         Collections.sort(list01, new Comparator<Integer>() {
             @Override
