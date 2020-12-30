@@ -1,6 +1,5 @@
-package demo02Exception;
+package exceptionDemo02;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /*
