@@ -10,7 +10,7 @@ import java.util.Collections;
            3.发牌
            4.看牌
  */
-public class DouDiZhu {
+public class   DouDiZhu {
     public static void main(String[] args) {
         //1.准备牌
         //定义一个存储54张牌的ArrayList集合，泛型使用String
