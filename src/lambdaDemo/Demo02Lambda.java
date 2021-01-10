@@ -28,5 +28,9 @@ public class Demo02Lambda {
             }
         ).start();
 
+        //优化省略lambda
+        new  Thread(() -> System.out.println(Thread.currentThread().getName()+"新线程创建了")
+        ).start();
+
     }
 }

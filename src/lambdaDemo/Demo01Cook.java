@@ -18,6 +18,10 @@ public class Demo01Cook {
         invokeCook(() -> {
             System.out.println("吃饭啦！");
         });
+
+        //优化lambda
+        invokeCook(() -> System.out.println("吃饭啦！")
+        );
     }
 
     //定义一个方法，参数传递Cook接口，方法内部调用Cook接口中的方法makeFood
