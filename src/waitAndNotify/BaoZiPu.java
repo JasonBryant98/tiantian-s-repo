@@ -74,6 +74,5 @@ public class BaoZiPu extends Thread{
                 System.out.println("包子铺已经生产好了："+bz.pi+bz.xian+"包子，吃货可以吃了！");
             }
         }
-
     }
 }
