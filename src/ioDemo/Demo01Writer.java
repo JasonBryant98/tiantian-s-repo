@@ -36,7 +36,7 @@ import java.io.IOException;
         3.使用FileWriter中的方法flush，把内存缓冲区中的数据，刷新到文件中
         4.释放资源（会先把内存缓冲区中的数据刷新到文件中）
  */
-public class Demo05Writer {
+public class Demo01Writer {
     public static void main(String[] args) throws IOException {
         //1.创建FileWriter对象，构造方法中绑定要写入数据的目的地
         FileWriter fw = new FileWriter("src\\ioDemo\\b.txt",true);
