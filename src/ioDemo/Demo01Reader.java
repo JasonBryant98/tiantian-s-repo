@@ -39,7 +39,8 @@ import java.io.IOException;
 public class Demo01Reader {
 
         public static void main(String[] args) throws IOException {
-            FileReader fileReader = new FileReader("/Users/liuyi/Downloads/Andriod Project/a.txt");
+//            FileReader fileReader = new FileReader("/Users/liuyi/Downloads/Andriod Project/a.txt");
+            FileReader fileReader = new FileReader("C:\\a.txt");
             char[] chars = new char[1024]; //存储读取到的多个字符
             int len = 0;
             while ((len = fileReader.read(chars)) != -1) {
