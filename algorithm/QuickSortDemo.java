@@ -1,5 +1,3 @@
-import jdk.nashorn.internal.ir.ForNode;
-
 import java.util.Scanner;
 
 public class QuickSortDemo {
@@ -36,7 +34,7 @@ public class QuickSortDemo {
 
 
 
-     private static void QuickSort(int left, int right, int[] a){
+     public static void QuickSort(int left, int right, int[] a){
         int i,j,tmp,basic;
         i = left;
         j = right;

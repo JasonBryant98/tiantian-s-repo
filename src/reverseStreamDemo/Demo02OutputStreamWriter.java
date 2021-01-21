@@ -33,7 +33,7 @@ import java.io.*;
  */
 public class Demo02OutputStreamWriter {
     public static void main(String[] args) throws IOException {
-        write_utf_8();
+//        write_utf_8();
 
         write_GBK();
     }
