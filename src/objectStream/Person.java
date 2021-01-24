@@ -12,8 +12,19 @@ import java.io.Serializable;
             没有：就会抛出NotSerializableException异常
 
      去市场买肉 --> 肉上有一个蓝色章（检测合格）--> 放心购买 --> 买回来怎么吃
+
+
+
+     static关键字：静态关键字
+        静态优先于非静态加载到内存中（静态优先于对象进入到内存中）
+        被static修饰的成员变量不能被序列化的，序列化的都是对象
+
+     transient关键字：瞬态关键字
+        被transient修饰的成员变量，不能被序列化
  */
 public class Person implements Serializable {
+    //自己定义序列化值，防止InvalidClassException异常
+    static final long serialVersionUID = 1L;
     private String name;
     private  int age;
 
