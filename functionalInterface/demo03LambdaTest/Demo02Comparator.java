@@ -36,6 +36,10 @@ public class Demo02Comparator {
         String[] arr = {"aaa","b","cccccc","dddddddd"};
         //输出排序前的数组
         System.out.println(Arrays.toString(arr));
+        //调用Arrays中的sort方法，对字符串数组进行排序
+        Arrays.sort(arr,getComparator());
+        //输出排序后的数组
+        System.out.println(Arrays.toString(arr));
 
     }
 
