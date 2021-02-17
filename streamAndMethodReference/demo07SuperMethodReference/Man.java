@@ -24,6 +24,21 @@ public class Man extends Human{
             //调用父类的sayHello方法
             h.sayHello();
         });
+
+        //因为有子父类关系，所以存在一个关键字super，代表父类，所以我们可以直接使用super调用弗雷德成员方法
+//        method(() -> {
+//            super.sayHello();
+//        });
+
+        /*
+            使用super引用类的成员方法
+            super是已经存在的
+            父类的成员方法sayHello也是已经存在的
+            所以可以直接使用super引用父类的成员方法
+         */
+        method(super::sayHello);
+
+
     }
 
     public static void main(String[] args) {

@@ -8,6 +8,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src-mac" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/algorithm" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Net" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/functionalInterface" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/streamAndMethodReference" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
