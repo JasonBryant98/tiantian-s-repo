@@ -18,7 +18,7 @@ public class QuickSortDemo {
         long begin = System.currentTimeMillis();
 
         //进行排序
-        QuickSort(1,n,a);
+        QuickSort2(1,n,a);
 
         long  last = System.currentTimeMillis();
 
@@ -34,7 +34,7 @@ public class QuickSortDemo {
 
 
 
-     public static void QuickSort(int left, int right, int[] a){
+     public static void QuickSort1(int left, int right, int[] a){
         int i,j,tmp,basic;
         i = left;
         j = right;
@@ -71,11 +71,37 @@ public class QuickSortDemo {
          a[i] = basic;
 
          //进行递归
-         QuickSort(left, i-1, a);
-         QuickSort(i+1, right, a);
+         QuickSort1(left, i-1, a);
+         QuickSort1(i+1, right, a);
 
      }
 
+    public static void QuickSort2(int left, int right, int[] a){
+        if(left > right) {
+            return;
+        }
+        int i = left, l = right;
+        int basic = a[left];
+        while (i < l) {
+            while (i < l && a[l] >= basic) {
+                l--;
+            }
+            if(i < l) {
+                a[i] = a[l];
+            }
+            while (i < l && a[i] <= basic) {
+                i++;
+            }
+            if (i < l) {
+                a[l] = a[i];
+            }
+            if (i >= l) {
+                a[i] = basic;
+            }
+        }
+        QuickSort2(left, i - 1, a);
+        QuickSort2(i + 1, right, a);
+    }
 
 
 
