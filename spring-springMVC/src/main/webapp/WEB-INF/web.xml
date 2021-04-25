@@ -4,6 +4,12 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          id="WebApp_ID" version="3.0">
 
+    <!--配置监听器-->
+    <listener>
+        <listener-class>listener.ContextLoaderListener</listener-class>
+    </listener>
+    
+
     <servlet>
         <servlet-name>userServlet</servlet-name>
         <servlet-class>web.UserServlet</servlet-class>
