@@ -9,6 +9,7 @@ public class UserController {
     @RequestMapping("/quick")
     public String save() {
         System.out.println("Controller save running...");
-        return "success.jsp";
+        //加"/"是为了访问外部success的文件
+        return "success";
     }
 }
