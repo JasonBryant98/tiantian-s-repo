@@ -2,15 +2,37 @@ package controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import domain.User;
+import domain.VO;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 @Controller
 public class UserController {
+
+    @ResponseBody
+    @RequestMapping("/quick15")
+    public void save15(@RequestBody List<User> userList) throws IOException {
+        System.out.println(userList);
+    }
+
+    @ResponseBody
+    @RequestMapping("/quick14")
+    public void save14(VO vo) throws IOException {
+        System.out.println(vo);
+    }
+
+    @ResponseBody
+    @RequestMapping("/quick13")
+    public void save13(String[] userList) throws IOException {
+        System.out.println(Arrays.asList(userList));
+    }
 
     @RequestMapping("/quick")
     public String save() {
@@ -51,4 +73,32 @@ public class UserController {
         String json = objectMapper.writeValueAsString(user);
         return json;
     }
+
+        @ResponseBody
+        @RequestMapping("/quick10")
+        // 期望SpringMVC自动将user转换成Json格式的字符串
+        // 需要到spring-mvc.xml中进行配置，配置RequestMappingHandlerAdapter
+        // 中的messageConverters，完成实体类到Json的格式自动转换
+        public User save10() {
+            User user1 = new User();
+            user1.setUsername("lisi");
+            user1.setAge(30);
+            return user1;
+        }
+
+    @ResponseBody
+    @RequestMapping("/quick11")
+    public void save11(String username, int age) throws IOException {
+        System.out.println(username);
+        System.out.println(age);
+    }
+
+    @ResponseBody
+    @RequestMapping("/quick12")
+    public void save12(User user) throws IOException {
+        System.out.println(user);
+    }
+
+
+
 }
