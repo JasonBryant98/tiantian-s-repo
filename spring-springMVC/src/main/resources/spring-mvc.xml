@@ -32,7 +32,10 @@
     <mvc:annotation-driven/>
 
 
-    <mvc:resources mapping="/js/**" location="/dao/"/>
+    <!--开放资源的访问权限-->
+<!--    <mvc:resources mapping="/img/**" location=""/>-->
 
+    <!--开放资源的访问权限(方法二)交给tomcat处理-->
+    <mvc:default-servlet-handler/>
 
 </beans>
