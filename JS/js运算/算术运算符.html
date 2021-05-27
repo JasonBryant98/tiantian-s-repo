@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+
+    /**
+     * 运算符也叫操作符
+     * 通过运算符可以对一个或多个值进行运算
+     * 比如：typeof就是运算符，可以来获得一个值的类型
+     *        值的类型以字符串的形式返回
+     *
+     *  当对非Number类型的数值进行运算，会先将其转换成数字、
+     *  任何值和NuN做运算 结果都是NuN
+     *  任何值和字符串做加法运算，都会先转换为字符串，然后在拼串
+     */
+
+    var result = 1 + 2 + "3"; // 33
+    document.write(result + "<br>");
+
+    /**
+     * 任何值做 - * / 运算都会自动转换为Number
+     *
+     */
+    var  d = "123";
+
+
+    /**
+     * 一元运算符，只需要一个操作数
+     *  + 正号
+     *  - 负号
+     *
+     */
+
+    result = -result;
+    document.write(result + "<br>");
+
+    /**
+     * 自增 ++
+     *     通过自增可以使变量在自身的基础上增加1
+     *
+     *     自增分成两种，后++（a++） 和 前++ （++a）
+     *
+     */
+    var a = 1;
+    console.log(a++); // 1
+    console.log(++a); // 2
+
+
+    console.log(a); // 2
+
+
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
