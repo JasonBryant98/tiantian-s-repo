@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+
+    /**
+     * 将其他的数据类型转换为Number
+     *      字符串 --> 数字
+     *        如果纯数字，则直接转化为数字
+     *        如果有非数字的内容，则转换为NaN
+     *        如果字符串为空串或全是空格的字符串，则转换为0
+     *        null --> 0
+     *        undifined --> NaN
+     *
+     *  方式二：
+     *        这种方式专门用来对付字符串
+     *        parseInt() 把一个字符串转换为整数
+     *        parseFloat() .............小数
+     *
+     */
+    var a = 'a';
+    a = Number(a);
+    document.write(typeof a + "<br>");
+    document.write(a);
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

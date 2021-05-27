@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+
+    /**
+     *  转换Boolean
+     *  NaN和0 为false
+     *  除了空串，其余都是true
+     *  null，undefined为false
+     */
+    var a = 123;
+    var b = Boolean(a);
+    a = 0; // false
+    a = NaN; // false
+    a = Infinity; // true
+    document.write(b);
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
