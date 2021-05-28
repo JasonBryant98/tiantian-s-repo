@@ -21,6 +21,28 @@
     console.log(result); // 6
     result = NaN && 0; //NaN
 
+    /**
+     * null == 0 // false
+     *
+     * // undefined 衍生于 null
+     * undefined == null // true
+     *
+     * NaN不和任何值相等，包括它本身
+     * 可以通过isNaN()函数来判断一个值是否是NaN
+     *
+     *
+     */
+    console.log(isNaN(result));
+
+    /**
+     * ===全等
+     *      用来判断两个值是否全等，他和相等类似，不同的是她不会做类型转换
+     *          如果类型不同，直接返回false
+     *
+     * ！== 不全等
+     *      不会做类型转换
+     */
+
 
 
   </script>
