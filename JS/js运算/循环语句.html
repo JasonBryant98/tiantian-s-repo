@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+        /**
+         *
+         * for循环中，为我们提供专门的位置用来放三个表达式：
+         *      1.初始表达式
+         *      2.条件表达式
+         *      3.更新表达式
+         *
+         */
+        // for(var i = 0; i < 10; i++) {
+        //     alert(i);
+        // }
+
+        /**
+         *  通过程序，在页面中输出如下的图像：
+         *
+         *  *
+         *  **
+         *  ***
+         *  ****
+         *  *****
+         */
+        // for (var i = 1; i <= 5; i++) {
+        //     for (var j = 1; j <=i; j++ ) {
+        //         document.write("*")
+        //     }
+        //     document.write("<br>");
+        // }
+
+        /**
+         * 输出99乘法表
+         */
+        for(var i = 1; i <= 9; i++) {
+            for (var j = 1; j <= i; j++) {
+                document.write("<span>" + j + "*" + i + "=" + i * j  + "</span>");
+            }
+            document.write("<br>");
+        }
+
+    </script>
+
+    <style type="text/css">
+
+        body {
+            width: 2000px;
+        }
+
+        span {
+            display: inline-block;
+            width: 70px;
+        }
+
+    </style>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+        /**
+         * break关键字可以用来推出switch或循环语句
+         */
+
+        /**
+         * 可以为循环语句创建一个label，来标识当前的循环
+         * label:循环语句
+         * 使用break语句时，可以再break后跟着一个label,
+         *      这样break将会结束指定的循环，而不是最近的循环
+         *
+         */
+
+
+        outer:
+        for(var i = 0; i < 5; i++) {
+            console.log("@外层循环" + i);
+            for(var j = 0; j< 5; j++) {
+                break outer;
+                console.log("内层循环" + j);
+            }
+        }
+
+        /**
+         * console.time("计时器的名字")可以用来开启一个计时器
+         */
+        console.time("test");
+        // 终止计时器
+        console.timeEnd("test");
+
+        /**
+         * 可以通过Math.sqrt()对一个数进行开方
+         */
+        var result = parseInt(Math.sqrt(15)) + 1;
+        document.write(result)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

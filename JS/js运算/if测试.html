@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+    <script type="text/javascript">
+
+        var score = prompt("请输入小明的期末成绩:");
+
+        // 判断值是否合法
+        if(score > 100 || score < 0 || isNaN(score)) {
+          alert("拉出去毙了!")
+        } else {
+          if(score == 100) {
+            document.write("你真棒！");
+            alert("表扬~");
+          } else {
+            alert("批评！！！");
+            document.write("你是废物！");
+          }
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
