@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+
+
+    /**
+     * 定义一个用来求两个数和的函数\
+     *    可以在函数的()中来指定一个或多个形参（形式参数）
+     *    多个形参之间使用，隔开，声明形参就相当于在函数内部声明了对应的变量
+     *    但是并不赋值
+     */
+    function sum(a,b) {
+      document.write(a+b);
+    }
+
+    /**
+     * 在调用函数时，可以在（）中指定实参
+     * @type {number}
+     */
+    var a = 1.5;
+    var b = 5;
+
+    sum(a, b)
+
+    /**
+     *  调用函数时解析器不会检查实参的类型
+     */
+    sum(123, "hello");
+
+    /**
+     *  调用函数时，解析器也不会检查实参的数量
+     *  多余的实参不会被赋值
+     *  如果实参的数量少于形参的数量，则没有对应实参的形参是undefined
+     */
+    sum()
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+
+    /**
+     *  创建一个函数，用来计算三个数的和
+     *
+     *  可以使用return 来设置含食宿的返回值
+     *    语法：
+     *        返回值
+     *
+     *    return后的值将会作为函数的执行结果返回
+     *
+     *    可以定义一个变量来接受结果；
+     *
+     *    如果return语句后不跟任何值就相当于返回一个undefined
+     *
+     *    return后可以跟任意类型的值
+     */
+    function sum(a, b, c) {
+      alert(a + b + c);
+      return a + b + c;
+    }
+
+    var sum1 = sum(4, 5, 8);
+
+    document.write(sum1);
+
+    // 判断是否是偶数
+    function isOu(num) {
+
+      // if(num % 2 == 0) {
+      //   return true;
+      // } else {
+      //   return false;
+      // }
+      return num % 2 ==0;
+    }
+
+    var result = isOu(2);
+    document.write(result);
+
+    /**
+     *  创建函数，在控制台输出一个人的信息
+     *
+     */
+    function sayHello(obj) {
+      console.log("我是" + obj.name + ",今年" + obj.age + "岁，我是" + obj.gender + ",住在" + obj.address);
+    }
+
+    // sayHello("Jason", 25, "男性", "上海");
+
+    var obj = {
+        name : "孙悟空",
+        age : 18,
+      gender : "男性",
+      address : "花果山"
+    }
+
+    sayHello(obj)
+
+    /**
+     * 函数也可以作为函数的参数（匿名函数也可）
+     */
+
+
+    /**
+     *  函数的返回值可以是任意的数据类型
+     *  也可以是一个对象，也可以是一个函数
+     */
+    function fun3() {
+        function fun4() {
+            alert("我是fun4");
+        }
+        return fun4;
+    }
+
+    a = fun3();
+    console.log(a)
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
