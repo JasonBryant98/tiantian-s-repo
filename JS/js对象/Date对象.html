@@ -7,7 +7,38 @@
 <body>
 <script type="text/javascript">
 
+    /**
+     * Date对象
+     *     在JS中使用Date对象来表示一个时间
+     *     如果直接使用构造函数创建，封装当前代码执行时间
+     */
+    // 创建一个Date
+    var d = new Date();
+    document.write(Date());
 
+    // 创建一个指定的时间对象
+    // 需要在构造函数传递一个表示时间的字符串作为参数
+    var d2 = new Date("2080/11/3 22:42:22");
+    console.log(d2);
+
+    // 获取当前几日
+    var date = d2.getDate();
+    console.log(date);
+
+    // 获取当前对象周几 0~6 Sunday:0
+    d2.getDay();
+
+    /**
+     * getTime()
+     *  获取当前日期时间的时间戳
+     *  时间戳，指的是从格林威治时间的1970年1月1日，0时0分0秒
+     *  到当前日期所花费的毫秒数（1秒 = 1000毫秒）
+     */
+    var time = d2.getTime();
+    console.log(time);
+
+    // 获取当前时间戳
+    time = Date.now();
 
 </script>
 </body>
