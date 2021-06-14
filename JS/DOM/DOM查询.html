@@ -20,12 +20,22 @@
        */
       var documentElement = document.documentElement;
 
+        all = document.getElementsByName("*");
+        console.log(all.length);
 
     };
+
+    /**
+     * 根据元素的class属性值查询一组元素节点对象
+     */
+   var box1 = document.getElementsByClassName("box1");
+    console.log(box1.length);
+
 
   </script>
 </head>
 <body>
-
+    <div class="box1">囖囖咯</div>
+    <div class="box1">dsa </div>
 </body>
 </html>
