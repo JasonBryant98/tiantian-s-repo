@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style type="text/css">
+      #box1{
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        padding: 10px;
+        border:10px  solid blue;
+      }
+  </style>
+
+  <script type="text/javascript">
+
+    window.onload = function () {
+      var box1 = document.getElementById("box1");
+      var btn01 = document.getElementById("btn01");
+
+      btn01.onclick = function () {
+        /**
+         * clientWidth
+         * clientHeight
+         *    -这两个属性可以获取元素的可见宽度和高度
+         *    这些属性都是不带px的，返回都是一个数字。可以直接进行计算
+         *    获取元素宽度和高度，包括内容区和内边距
+         */
+        console.log(box1.clientHeight); // 100 --》 120
+
+        // box1.clientHeight = 300;   不能修改属性，都是只读属性
+
+        alert(box1.offsetHeight); // 获取元素的整个的宽度和高度，包括内容区、内边距和边框
+
+        /**
+         *  offsetParent
+         *  - 可以用来获取当前元素的定位父元素
+         *  会获取到离当前元素最近的开启了定位的祖先元素
+         */
+
+        /**
+         * offsetLeft
+         *    - 当前元素相对于其定位父元素的水平偏移量
+         * offsetTop
+         *    - 当前元素相对于其定义为元素的垂直偏移量
+         */
+
+
+      }
+
+    };
+  </script>
+
+</head>
+<body>
+<button id="btn01">点我一下</button>
+  <div id="box1"></div>
+</body>
+</html>
