@@ -39,6 +39,9 @@
         * clientX可以获取鼠标指针的水平坐标
         * cilentY可以获取鼠标指针的垂直坐标
         */
+       if(event) {
+            event = window.event;
+       }
        var x = event.clientX;
        var y = event.clientY;
        // alert("x = " + x + ", y = " + y);
