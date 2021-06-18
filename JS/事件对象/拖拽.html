@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <style type="text/css" >
+
+    #box1 {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: absolute;
+    }
+    #box2 {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        position:absolute;
+
+        left:200px;
+        top: 200px;
+    }
+
+  </style>
+
+  <script type="text/javascript">
+
+    window.onload = function () {
+      /**
+       * 拖拽box1元素
+       * - 拖拽流程
+       *    1.当鼠标在被拖拽元素上按住  onmousedown
+       *    2.当鼠标移动时被拖拽元素跟随鼠标移动 onmousemove
+       *    3.当鼠标松开时，被拖拽元素固定在当前位置 onmouseup
+       *
+       */
+
+      // 获取box1
+      var box1 = document.getElementById("box1");
+      var box2 = document.getElementById("box2");
+
+      drug(box1);
+      drug(box2);
+
+
+
+
+    }
+
+
+    function drug(obj) {
+        //为box1绑定一个鼠标按下事件
+        obj.onmousedown = function (event) {
+            event = event || window.event;
+            // div偏移量 鼠标.clientX - 元素.offsetLeft
+            // div偏移量 鼠标.clientY - 元素.offsetTop
+            var ol = event.clientX - obj.offsetLeft;
+            var ot = event.clientY - obj.offsetTop;
+
+            // 当鼠标移动时被拖拽元素跟随鼠标移动 onmousemove
+            // 为document绑定
+            document.onmousemove = function (event) {
+
+
+                // 当鼠标移动时被拖拽元素跟随鼠标移动
+                event = event || window.event;
+                // 获取鼠标的坐标
+                var left = event.clientX;
+                var top = event.clientY;
+
+                // 修改box1的位置
+                obj.style.left = left - ol + "px";
+                obj.style.top = top - ot  + "px";
+            };
+
+            // 当鼠标松开时，被拖拽元素固定在当前位置 onmouseup
+            document.onmouseup = function () {
+                //取消document的onmousemove事件
+                document.onmousemove = null;
+                // 取消document的onmouseup事件
+                document.onmouseup = null;
+
+            };
+
+            /**
+             * 当我们拖拽一个网页中的内容中的内容时，浏览器会默认去搜索引擎中的搜索内容
+             *  此时会导致拖拽功能的异常，这个是浏览器提供的默认行为
+             *  如果不希望发生这个行为，则可以通过return false来取消默认行为
+             */
+            return false;
+        };
+
+    }
+
+  </script>
+
+</head>
+<body>
+  <div id="box1"></div>
+  <div id="box2"></div>
+</body>
+</html>
