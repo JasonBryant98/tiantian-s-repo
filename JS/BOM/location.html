@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        /**
+         * Location
+         *      - 该对象中封装了浏览器的地址栏的信息
+         */
+        window.onload = function (){
+
+            // 获取按钮对象
+            var btn = document.getElementById("btn");
+
+            // 获取到地址栏的信息，当前页面的完整路径
+            btn.onclick = function () {
+
+                /**
+                 * 如果直接将location属性修改为一个完整的路径或相对路径
+                 *  则我们页面会自动跳转到该路径，并且会生成相应的历史记录
+                 * @type {string}
+                 */
+                changeLocation(b);
+
+                changeLocation2(b);
+
+                // alert(history.length);
+            }
+
+
+
+        };
+
+        function  changeLocation(callback) {
+            location = "http://www.baidu.com";
+
+        };
+        function  changeLocation2(callback) {
+            location = "http://localhost:63342/tiantian-s-repo/JS/BOM/location.html?_ijt=deq63vrup8k3aoefhcd0erkf2e";
+
+        };
+
+        function  b() {
+            console.log(history.length);
+        };
+
+        /**
+         * reload()
+         */
+        // location.reload();
+
+    </script>
+
+</head>
+
+<body>
+<button id="btn">点我一下</button>
+
+</body>
+</html>
