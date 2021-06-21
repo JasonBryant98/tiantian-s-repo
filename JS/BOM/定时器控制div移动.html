@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+        }
+    </style>
+    <script type="text/javascript">
+
+        // 使div可以根据不同的方向键向不同的方向移动
+        /**
+         * 按左键，div向左移
+         * 按右键，div向右移
+         */
+        window.onload = function () {
+
+            var speed = 10;
+
+            // 创建一个变量表示方向
+            // 修改dir修改
+            var dir = 0;
+
+            /**
+             * ArrowUp
+             * ArrowLeft
+             * ArrowRight
+             * ArrowDown
+             */
+            var value;
+
+
+            var box1 = document.getElementById("box1");
+
+            // 为document绑定一个按键按下的事件
+            document.onkeydown = function(event) {
+                console.log(event.key);
+                // 当用户按了ctrl以后，速度加快
+                if (event.shiftKey) {
+                    speed = 40;
+                }
+                if (!event.shiftKey) {
+                    speed = 10;
+                }
+
+                if (event.key === "ArrowLeft") {
+                    value = 37;
+                } else if (event.key === "ArrowUp") {
+                    value = 38;
+                } else if (event.key === "ArrowRight") {
+                    value = 39;
+                } else if (event.key === "ArrowDown") {
+                    value = 40;
+                }
+
+
+            };
+
+
+
+
+
+
+            // 开启一个定时器
+            setInterval(function (){
+
+                switch (dir = value) {
+                    case 37:
+                        // alert("向左");
+                        // left值减小
+                        box1.style.left = box1.offsetLeft - speed + "px";
+                        break;
+                    case 38:
+                        box1.style.top = box1.offsetTop - speed + "px";
+                        break;
+                    case 39:
+                        box1.style.left = box1.offsetLeft + speed + "px";
+                        break;
+                    case 40:
+                        box1.style.top = box1.offsetTop + speed + "px";
+                        break;
+                }
+
+            }, 20) // 设置时间间隔
+
+            // 按键松开时，div不在移动
+            document.onkeyup = function () {
+                // 设置方向为0
+               value = 0;
+            }
+
+
+
+        };
+
+    </script>
+</head>
+<body>
+<div id="box1"></div>
+</body>
+</html>
