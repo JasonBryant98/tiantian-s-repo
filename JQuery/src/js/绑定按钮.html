@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+      // $(document).ready(函数):当页面中的dom对象加载成功后，会执行ready（）
+      // 相当于onload()
+      $(function () {
+         // 当页面dom对象加载后，给对象绑定事件，因为此时button对象已经在内存中创建好了
+        $("#btn1").click(function () {
+           // 过滤器
+          var obj = $("div:first");
+          var obj2 = $("#one");
+          obj.css("background","red");
+        })
+      })
+
+
+    </script>
+</head>
+<body>
+    <div id="one">我是div-0</div>
+    <div id="two">我是div-1</div>
+    <button id="btn1">获取第一个div</button>
+</body>
+</html>

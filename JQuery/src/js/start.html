@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+      // 单击按钮获取 文本框中的value值
+      function fun1() {
+        // 通过js中的id获取dom对象
+        var obj = document.getElementById("txt1");
+        alert(obj.value);
+      }
+
+
+    </script>
+</head>
+<body>
+    <input type="text" id="txt1" value="我是txt1"/> <br>
+    <input type="text" id="txt2" value="我是txt2"/> <br>
+    <input type="button" value="单击函数" onclick="fun1()"/>
+</body>
+</html>
