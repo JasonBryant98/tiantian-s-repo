@@ -54,6 +54,11 @@
                 alert($("img").attr("src"));
             })
 
+            $("#btn6").click(function () {
+                // 设置指定属性的指定值
+                $("img").attr("src","src/img2.jpg")
+            });
+
         })
 
     </script>
@@ -77,6 +82,7 @@
 <input type="button" value="获取所有div的文本值" id="btn3"/><br>
 <input type="button" value="设置div的文本值" id="btn4"/><br>
 <input type="button" value="读取src属性的值" id="btn5"/><br>
+<input type="button" value="设置指定的属性值" id="btn6"/><br>
 
 </body>
 </html>
